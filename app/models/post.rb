@@ -11,8 +11,12 @@
 #
 
 class Post < ApplicationRecord
+  alias_attribute :author, :user
+
   belongs_to :user
 
-  validates :title, presence: true
+  has_many :comments
+
+  validates :title, presence: true, uniqueness: { scope: :user }
   validates :text, presence: true
 end
