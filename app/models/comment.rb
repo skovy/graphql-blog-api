@@ -11,8 +11,11 @@
 #
 
 class Comment < ApplicationRecord
+  alias_attribute :author, :user
+
   belongs_to :post
   belongs_to :user
 
-  validates :text, presence: true
+  # avoid duplicate comments by the same user on the same post
+  validates :text, presence: true, uniqueness: { scope: [:user, :post] }
 end
