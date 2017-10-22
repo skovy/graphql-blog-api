@@ -1,6 +1,6 @@
 Types::QueryType = GraphQL::ObjectType.define do
-  name "Query"
-  description 'Entry point for all blog queries'
+  name 'Query'
+  description 'Query blog data'
 
   field :post do
     type Types::PostType
