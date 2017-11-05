@@ -30,6 +30,9 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 
+  # Manage Procfile-based applications
+  gem 'foreman'
+
   # GraphiQL for debugging and testing GraphQL queries
   gem 'graphiql-rails'
 
