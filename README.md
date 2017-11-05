@@ -1,6 +1,9 @@
 # GraphQL Blog API
 
-This repository is a Rails 5 API for a GraphQL blog and client agnostic.
+This repository is a Rails 5 API for a GraphQL blog and client agnostic. It does
+not contain a client to consume the API, but does include GraphiQL in development.
+See [`graphql-blog-api`](https://github.com/Skovy/graphql-blog-api) for a client
+implementation that consumes this GraphQL endpoint.
 
 ## Technologies
 
@@ -8,14 +11,19 @@ This repository is a Rails 5 API for a GraphQL blog and client agnostic.
 - [PostgreSQL](https://www.postgresql.org/)
 - [graphql-ruby](https://github.com/rmosolgo/graphql-ruby) - GraphQL-Ruby is a Ruby implementation of GraphQL.
 - [graphiql](https://github.com/graphql/graphiql) - GraphiQL is an in-browser IDE for exploring GraphQL.
-- [rack-cors](https://github.com/cyu/rack-cors) Rack Middleware for handling Cross-Origin Resource Sharing (CORS), which makes cross-origin AJAX possible.
+- [rack-cors](https://github.com/cyu/rack-cors) - Rack Middleware for handling Cross-Origin Resource Sharing (CORS), which makes cross-origin AJAX possible.
+- [optics-agent](https://github.com/apollographql/optics-agent-ruby) - Apollo Optics agent for GraphQL Monitoring in Ruby
 
-## To Do
+## Features
 
-- [ ] Optics Agent - Optics Agent for GraphQL Monitoring
+- Get a list of recent posts
+- Get a post, comment or user
+- Create a post, comment or user
 
 ## Setup
 
+- Install bundler
+  - `gem install bundler`
 - Clone the repository
   - `git clone git@github.com:Skovy/graphql-blog-api.git`
 - Change to the GraphQL Blog API directory
@@ -29,3 +37,8 @@ This repository is a Rails 5 API for a GraphQL blog and client agnostic.
 - Start the server
   - `foreman start`
 - Play around with GraphiQL (`/graphiql`) or hit the GraphQL (`/graphql`) endpoint
+
+## Next Steps
+
+- [ ] Add seeds for development
+- [ ] Authentication
