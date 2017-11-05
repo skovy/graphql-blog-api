@@ -19,6 +19,7 @@ implementation that consumes this GraphQL endpoint.
 - Get a list of recent posts
 - Get a post, comment or user
 - Create a post, comment or user
+- GraphiQL for local debugging, schema exploration and documentation
 
 ## Setup
 
@@ -41,4 +42,5 @@ implementation that consumes this GraphQL endpoint.
 ## Next Steps
 
 - [ ] Add seeds for development
+- [ ] One step Heroku Deployment
 - [ ] Authentication
