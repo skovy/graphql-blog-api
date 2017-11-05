@@ -4,8 +4,8 @@ class GraphqlController < ApplicationController
     query = params[:query]
     operation_name = params[:operationName]
     context = {
-      # Query context goes here, for example:
-      # current_user: current_user,
+      # GraphQL Optics Agent for endpoint performance
+      optics_agent: request.env[:optics_agent].with_document(query)
     }
     result = GraphQLBlog.execute(query, variables: variables, context: context, operation_name: operation_name)
     render json: result

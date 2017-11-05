@@ -19,6 +19,9 @@ gem 'rack-cors'
 # Use GraphQL for the API
 gem 'graphql'
 
+# Optics Agent for GraphQL Monitoring in Ruby
+gem 'optics-agent'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
