@@ -10,6 +10,13 @@ Types::QueryType = GraphQL::ObjectType.define do
     resolve ->(obj, args, ctx) { Post.find(args['id']) }
   end
 
+  field :posts do
+    type types[Types::PostType]
+    description 'Get the list of most recent posts'
+
+    resolve ->(obj, args, ctx) { Post.order(created_at: :desc).limit(10) }
+  end
+
   field :comment do
     type Types::CommentType
     argument :id, !types.ID
