@@ -3,6 +3,7 @@ Types::PostType = GraphQL::ObjectType.define do
   description 'A post on the blog'
 
   field :id, types.ID
+  field :createdAt, types.String, 'DateTime when the post was created', property: :created_at
   field :title, !types.String, 'Title of the post'
   field :text, !types.String, 'Text of the post'
   field :author, !Types::UserType, 'Author of the post'
