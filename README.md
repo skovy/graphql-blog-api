@@ -2,7 +2,7 @@
 
 This repository is a Rails 5 API for a GraphQL blog and client agnostic. It does
 not contain a client to consume the API, but does include GraphiQL in development.
-See [`graphql-blog-api`](https://github.com/Skovy/graphql-blog-api) for a client
+See [`graphql-blog-client`](https://github.com/Skovy/graphql-blog-client) for a client
 implementation that consumes this GraphQL endpoint.
 
 ## Technologies
