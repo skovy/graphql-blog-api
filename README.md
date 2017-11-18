@@ -34,7 +34,9 @@ implementation that consumes this GraphQL endpoint.
 - Copy local environment variables and configure as necessary
   - `cp .env.example .env`
 - Create and migrate the database
+  - `rails db:create`
   - `rails db:migrate`
+  - `rails db:seed`
 - Start the server
   - `foreman start`
 - Play around with GraphiQL (`/graphiql`) or hit the GraphQL (`/graphql`) endpoint
