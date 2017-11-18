@@ -3,6 +3,7 @@ Types::CommentType = GraphQL::ObjectType.define do
   description 'A comment on a single post on the blog'
 
   field :id, types.ID
+  field :createdAt, types.String, 'DateTime when the comment was created', property: :created_at
   field :text, !types.String, 'Text of the comment'
   field :post, !Types::PostType, 'Post the comment was made on'
   field :author, !Types::UserType, 'Author of the comment'
