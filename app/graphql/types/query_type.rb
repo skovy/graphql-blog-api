@@ -14,9 +14,7 @@ Types::QueryType = GraphQL::ObjectType.define do
     type types[Types::PostType]
     description 'Get the list of most recent posts'
 
-    resolve ->(obj, args, ctx) {
-      Post.order(created_at: :desc).limit(10).to_a.each { |post| post.text = post.text.to_s.truncate(250, separator: ' ') }
-    }
+    resolve ->(obj, args, ctx) { Post.order(created_at: :desc).limit(10) }
   end
 
   field :comment do
@@ -33,5 +31,12 @@ Types::QueryType = GraphQL::ObjectType.define do
     description 'Find a User by ID'
 
     resolve ->(obj, args, ctx) { User.find(args['id']) }
+  end
+
+  field :users do
+    type types[Types::UserType]
+    description 'Get the list of most recent users'
+
+    resolve ->(obj, args, ctx) { User.order(created_at: :desc).limit(10) }
   end
 end
