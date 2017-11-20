@@ -44,6 +44,5 @@ implementation that consumes this GraphQL endpoint.
 
 ## Next Steps
 
-- [ ] Add seeds for development
 - [ ] One step Heroku Deployment
 - [ ] Authentication
