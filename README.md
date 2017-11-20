@@ -16,7 +16,7 @@ implementation that consumes this GraphQL endpoint.
 
 ## Features
 
-- Get a list of recent posts
+- Get a list of recent posts or recent users
 - Get a post, comment or user
 - Create a post, comment or user
 - GraphiQL for local debugging, schema exploration and documentation
@@ -36,6 +36,7 @@ implementation that consumes this GraphQL endpoint.
 - Create and migrate the database
   - `rails db:create`
   - `rails db:migrate`
+- Create fake seed data *(optional)*
   - `rails db:seed`
 - Start the server
   - `foreman start`
